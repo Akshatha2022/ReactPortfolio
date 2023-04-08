@@ -1,195 +1,129 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
-}
-
-body {
-  background-color: whitesmoke;
-}
-
-.bucket-app {
+.App {
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  width: 800px;
-  min-height: 600px;
-  background: black;
-  text-align: center;
-  margin: 32px auto;
-  border-radius: 20px;
-  padding-bottom: 32px;
+  height: 100vh;
+  background: #F5F5F5;
+}
+.App>div{
+  background: #F5F5F5
 }
 
-h1 {
-  margin: 32px 0;
-  color: #fff;
-  font-size: 24px;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-h3 {
-  margin: auto;
-  color: rgb(66, 171, 231);
-  font-size: 20px;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
-.complete {
-  text-decoration: line-through;
-  opacity: 0.4;
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #F5F5F5;
 }
 
-.bucket-form {
-  margin-bottom: 32px;
+.App-link {
+  color: #61dafb;
 }
 
-.bucket-input {
-  padding: 14px 32px 14px 16px;
-  border-radius: 4px;
-  border: 2px solid #5d0cff;
-  outline: none;
-  width: 320px;
-  background: transparent;
-  color: #fff;
+Footer{
+  margin-top: auto;
 }
 
-.bucket-input::placeholder {
-  color: #e2e2e2;
-}
-
-.bucket-button {
-  padding: 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  outline: none;
-  background: #5d0cff;
-  color: #fff;
-  text-transform: capitalize;
-}
-
-.bucket-input.edit {
-  border: 2px solid #149fff;
-}
-
-.bucket-button.edit {
-  background: linear-gradient(
-    90deg,
-    rgba(20, 159, 255, 1) 0%,
-    rgba(17, 122, 255, 1) 100%
-  );
-  padding: 16px 22px;
-}
-
-.bucket-container {
+.headerName{
   display: flex;
   flex-direction: row;
-  position: relative;
-}
 
-.bucket-row {
+}
+.nav{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 4px auto;
-  color: #fff;
-  padding: 16px;
-  border-radius: 5px;
-  width: 90%;
+  justify-content: flex-end;
+  flex-direction: row;
 }
 
-.low {
-  background: linear-gradient(
-    90deg,
-    rgba(93, 12, 255, 1) 0%,
-    rgba(155, 0, 250, 1) 100%
-  );
+.formBtn{
+  padding: 40px;
 }
 
-.medium {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 12, 241, 1) 0%,
-    rgba(250, 0, 135, 1) 100%
-  );
+#socialImg{
+  width: 20%;
+  height: 20%;
+  border-radius: 10px;
+  
 }
 
-.high {
-  background: linear-gradient(
-    90deg,
-    rgba(20, 159, 255, 1) 0%,
-    rgba(17, 122, 255, 1) 100%
-  );
-}
-
-.icons {
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.delete-icon {
-  margin-right: 5px;
-  color: #fff;
-}
-
-.edit-icon {
-  color: #fff;
-}
-
-/* Dropdown menu */
-
-/* Dropdown Button */
-.dropbtn {
-  background-color: #ec5700;
-  border-radius: 4px;
-  width: 75px;
+#cardLink{
+  background: #0A66C2;
+  border-radius: 9px;
   color: white;
-  padding: 16px;
-  margin: 10px;
-  /* font-size: 16px; */
-  border: none;
+  padding: 5px;
+  
+
 }
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
+#btn{
+margin-top: 4px;
 }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #ffffff;
-  min-width: 215px;
+#cardContainer{
+  width: 50%;
+  height: 50%;
+  border-radius: 10px;
+  margin-left: 10px;
+  background: #F5F5F5;
+}
+
+#outerContainer{
+  background: #F0F0F0;
   border-radius: 4px;
-  padding: 16px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
 }
 
-/* Links inside the dropdown */
-.dropdown-content p {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+#formGridName{
+ 
+  width: 50%;
+  justify-content: center;
+  margin: auto;
+  padding: 3px;
+
+
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content p:hover {
-  background-color: #ddd;
+#containerFd{
+  background: #F5F5F5;
+  width: 10;
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
+#userEmail{
+  
+  width: 50%;
+  justify-content: center;
+  margin: 1%;
+  padding: 3px;
+
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #5d0cff;
+#formGridQuery{
+
+  width: 50%;
+  justify-content: center;
+  margin:auto;
+  border-radius: 5px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
