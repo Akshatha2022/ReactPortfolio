@@ -1,87 +1,36 @@
 import React, { useState } from 'react';
+import NavTabs from './Navtabs';
+import About from '.';
+import Resume from '.';
+import Contact from './t';
+import Portfolio from './';
 
-function BucketForm(props) {
-  const [input, setInput] = useState('');
-  let [eagerness, setEagerness] = useState('');
+export default function PortfolioContainer() {
+    const [currentPage, setCurrentPage] = useState('Home');
 
-  // TODO: Use this array in the return statement below
-  const eagernessLevel = ['high', 'medium', 'low']
+    // TODO: Add a comment describing the functionality of this method
+    //  checking to see if currentpage is one of the nav links and then render page if it is
+    const renderPage = () => {
+      if (currentPage === 'About') { //about me
+        return < />;
+      }
+      if (currentPage === '') { // my portfolio
+        return < />;
+      }
+      if (currentPage === 'Resume') { // my resume
+        return </>;
+      }
+      return < />;
+    };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+    const handlePageChange = (page) => setCurrentPage(page);
 
-    if (!eagerness) {
-      eagerness = 'low';
-    }
-
-    props.onSubmit({
-      id: Math.random(Math.floor() * 1000),
-      text: input,
-      eagerness: eagerness,
-    });
-
-    setInput('');
-    setEagerness('');
-  };
-
-  const handleChange = (e) => {
-    setInput(e.target.value);
-  };
-
-  // First we check to see if "edit" prop exists. If not, we render the normal form
-  // If the prop "edit" exists, we know to render the update form instead
-  return !props.edit ? (
-    <div>
-      <form className="bucket-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Add to your bucket list"
-          value={input}
-          name="text"
-          className="bucket-input"
-          onChange={handleChange}
-        ></input>
-        <div className="dropdown">
-          <button className={`dropbtn ${eagerness}`}>
-            {eagerness || 'Priority'}
-          </button>
-          <div className="dropdown-content">
-            {/* TODO: Add an onClick event that will set the corresponding eagerness level from the `eagernessLevel` array */}
-            <p onClick={}>Must do</p>
-            <p onClick={}>Want to do</p>
-            <p onClick={}>Take it or leave it</p>
-          </div>
-        </div>
-        <button className="bucket-button">Add bucket list item</button>
-      </form>
-    </div>
-  ) : (
-    <div>
-      <h3>Update entry: {props.edit.value}</h3>
-      <form className="bucket-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder={props.edit.value}
-          value={input}
-          name="text"
-          className="bucket-input"
-          onChange={handleChange}
-        ></input>
-        <div className="dropdown">
-          <button className={`dropbtn ${eagerness}`}>
-            {eagerness || 'Priority'}
-          </button>
-          <div className="dropdown-content">
-            {/* TODO: Add an onClick event that will set the corresponding eagerness level from the `eagernessLevel` array */}
-            <p onClick={}>Must do</p>
-            <p onClick={}>Want to do</p>
-            <p onClick={}>Take it or leave it</p>
-          </div>
-        </div>
-        <button className="bucket-button">Update</button>
-      </form>
-    </div>
-  );
-}
-
-export default BucketForm;
+    return (
+      <div>
+        {}
+        <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
+        {}
+        {renderPage()}
+      </div>
+    );
+  }
