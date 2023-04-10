@@ -4,8 +4,12 @@ const styles = {
     About: {
     margin: 10,
       background: 'red',
+      borderRadius: 50,
+      padding: 1
     },
     heading: {
+        borderRadius: 10,
+        margin: 50,
        background: '#3f51b5',
       minHeight: 60,
       lineHeight: 3.5,

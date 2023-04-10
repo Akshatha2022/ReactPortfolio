@@ -33,14 +33,14 @@ export default function Contact() {
   );
 }
 
-function Contact() {
-    return (
-      <div style={styles.contact}>
-        <div style={styles.heading}>ContactMe</div>
-        <div style={styles.content}>
-'You can contact me through my github or my email address'
-        </div>
-      </div>
-    );
-  }
+// function Contact() {
+//     return (
+//       <div style={styles.contact}>
+//         <div style={styles.heading}>Contact</div>
+//         <div style={styles.content}>
+// 'You can contact me through my github or my email address'
+//         </div>
+//       </div>
+//     );
+//   }
 
