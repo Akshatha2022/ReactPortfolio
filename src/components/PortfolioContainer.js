@@ -11,8 +11,8 @@ export default function PortfolioContainer() {
     // TODO: Add a comment describing the functionality of this method
     //  checking to see if currentpage is one of the nav links and then render page if it is
     const renderPage = () => {
-      if (currentPage === 'About') {
-        return <About />;
+      if (currentPage === 'Contact') {
+        return <Contact />;
       }
       if (currentPage === 'Portfolio') {
         return <Portfolio />;
@@ -20,7 +20,7 @@ export default function PortfolioContainer() {
       if (currentPage === 'Resume') {
         return <Resume />;
       }
-      return <Contact />;
+      return <About />;
     };
 
     const handlePageChange = (page) => setCurrentPage(page);
