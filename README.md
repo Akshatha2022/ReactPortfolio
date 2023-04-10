@@ -63,7 +63,9 @@ THEN I am presented with text or icon links to the developer’s GitHub and Link
 
 
 
+Resources:
 
 https://mdbootstrap.com/support/react/needed-css-imports-for-mdb-react-ui-kit-1-5-0/
 https://www.npmjs.com/package/mdb-react-ui-kit
 https://stackoverflow.com/questions/44331005/npm-error-no-matching-version-found-for
+https://stackoverflow.com/questions/71913692/module-not-found-error-cant-resolve-react-dom-client
